@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdio.h>
 /**
 * print_str - prints string 
 *
@@ -14,10 +16,9 @@ int print_str(char *c)
 	if (c == NULL)
 		c = "(nil)";
 
-	for(i = 0; *(c + i); i++)
+	for (i = 0; *(c + i); i++)
 	{
-		if(*(c + i) != '/0')
-			_putchar(*(c + i);
+		_putchar(*(c + i));
 	}
 	return(i);
 }

@@ -72,7 +72,7 @@ case 'r':
 count += print_rev(va_arg(ap, char *));
 break;
 case '\0':
-return(-1);
+return (-1);
 default:
 count += _putchar('%');
 count += _putchar(format[i]);
@@ -80,11 +80,11 @@ count += _putchar(format[i]);
 flag = 0;
 }
 }
-va_end(ap)
+va_end(ap);
 }
 else
 {
-return(-1);
+return (-1);
 }
 return (count);
 }
