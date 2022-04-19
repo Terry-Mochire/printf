@@ -19,16 +19,16 @@ int print_int(int n)
 		if (n < 0)
 		{
 			i += _putchar('-');
-		}	
+		}
 		if ((n / 10) > 0)
 		{
-			i += print_int(n / 10); 
+			i += print_int(n / 10);
 			i += _putchar((n % 10) + '0');
 		}
 		else
 		{
 			i += _putchar(n + '0');
 		}
-	}	
+	}
 	return (i);
 }
