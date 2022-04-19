@@ -1,31 +1,26 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
-* _printf - produces output according to a format.
-*
-* @format: string
-*
-* Return: The number of characters printed.
-*/
-
+ * _printf - produces output according to a format.
+ * @format: string
+ * Return: The number of characters printed
+ * (excluding the null byte used to end output to strings)
+ */
 int _printf(const char *format, ...)
 {
 va_list ap;
-int i = 0, count = 0, flag =0;
+int i = 0, count = 0, flag = 0;
 
 if (format)
 {
-va_start(ap,format);
+va_start(ap, format);
 for (; format[i] != '\0'; i++)
 {
-if(!flag)
+if (!flag)
 {
 if (format[i] != '%')
 count += _putchar(format[i]);
-else 
+else
 flag = 1;
 }
 else
@@ -42,7 +37,7 @@ case '%':
 count += _putchar('%');
 break;
 case 'd':
-count += print_dec(va_arg(ap, int));
+count += print_int(va_arg(ap, int));
 break;
 case 'i':
 count += print_int(va_arg(ap, int));

@@ -1,0 +1,51 @@
+.\" Manpage for _printf.
+.\" Contact terrybmochire@gmail.com to correct errors or typos.
+
+.TH man 8 "18 April 2022" "1.0" "_printf man page"
+
+.SH NAME
+        _printf - produces output according to a format.
+
+.SH SYNOPSIS
+        printf FORMAT [ARGUMENT]... 
+        The "main.h" header file is needed to use this function.
+
+
+.SH DESCRIPTION
+        Prints ARGUMENT(s) according to FORMAT.
+
+.SH FORMAT
+        controls the output as in C printf.  Interpreted sequences are:
+                \\      escape the next character
+                \\\\     print a backslash
+                "      start or end of string
+                \\"     print a double quote
+                \\'     print a single quote
+                %      start a format specification
+                \\%     print a percent sign
+                \\"     double quote
+                \\\     backslash
+                %%     a single %
+                %c     print specified character (char)
+                %s     print specified string of characters
+                %d     print specified decimal (integer) number (base 10)
+                %i     print specified integer (base 10)
+
+.SH REPORTING BUGS
+       Create a github issue at https://github.com/Terry-Mochire/printf/issues
+
+SEE ALSO
+       printf(3)
+
+       Full documentation at: <https://www.gnu.org/software/coreutils/printf>
+       or available locally via: info '(coreutils) printf invocation'
+
+.SH AUTHOR
+        Written by Terry Mochire, Mercy Mukiri
+
+.SH DATE
+        Written on April 18th, 2022.
+
+.SH COPYRIGHT
+        This is free software: you are free to change and redistribute it.  
+        There is NO WARRANTY, to the extent permitted by law.
